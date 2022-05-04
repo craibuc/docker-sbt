@@ -1,5 +1,5 @@
 OPENJDK_TAG=11.0.13
-SBT_VERSION=1.5.7
+SBT_VERSION=1.6.2
 APP_TAG=mozilla/sbt
 
 tag:
@@ -13,7 +13,7 @@ build:
 	docker build \
 		--build-arg OPENJDK_TAG=${OPENJDK_TAG} \
 		--build-arg SBT_VERSION=${SBT_VERSION} \
-		--tag ${APP_TAG}:${OPENJDK_TAG}_${SBT_VERSION} \
+		--tag ${APP_TAG}:${SBT_VERSION} \
 		--tag ${APP_TAG}:latest \
 		.
 
